@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "FastAPI MVC App Collection",
+    "_postman_id": "e3d5a1d0-1234-5678-90ab-cdef12345678",
+    "description": "A Postman collection for testing the FastAPI MVC Application endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User Signup",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"secret123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"secret123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "token",
+            "value": "<YOUR_TOKEN_HERE>"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"This is a new post!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8001/posts/add",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["posts", "add"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Posts",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "token",
+            "value": "<YOUR_TOKEN_HERE>"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8001/posts/get",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["posts", "get"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Post",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "token",
+            "value": "<YOUR_TOKEN_HERE>"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8001/posts/delete/<POST_ID>",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8001",
+          "path": ["posts", "delete", "<POST_ID>"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

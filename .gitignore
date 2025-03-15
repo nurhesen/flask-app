@@ -1,0 +1,34 @@
+# Byte-compiled / compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Docker
+*.log
+docker-compose.override.yml
+db-data/
+dist/
+
+# Alembic
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+
+# Pytest
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store

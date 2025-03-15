@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic[email]
+PyMySQL
+bcrypt==3.2.0
+passlib>=1.7.4
+PyJWT
+cryptography
+alembic
+dotenv
+pytest
+httpx
